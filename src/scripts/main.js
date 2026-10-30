@@ -23,6 +23,24 @@ promise1.then(() => {
   document.body.append(success);
 });
 
+promise1.catch(() => {
+  const error = document.createElement('div');
+
+  error.classList.add('message', 'error-message');
+  error.textContent = 'Promise was rejected!';
+
+  document.body.append(error);
+});
+
+promise2.then(() => {
+  const success = document.createElement('div');
+
+  success.classList.add('message');
+  success.textContent = 'Promise was resolved!';
+
+  document.body.append(success);
+});
+
 promise2.catch(() => {
   const error = document.createElement('div');
 
